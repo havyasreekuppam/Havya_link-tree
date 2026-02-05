@@ -1,4 +1,3 @@
-/* ===== RESET + BASE ===== */
 body{
     margin:0;
     font-family: Inter, sans-serif;
@@ -6,7 +5,6 @@ body{
     color:white;
 }
 
-/* ===== MAIN LAYOUT ===== */
 .main{
     min-height:100vh;
     display:flex;
@@ -16,7 +14,6 @@ body{
     padding:40px 20px;
 }
 
-/* ===== TOP SECTION ===== */
 .top-section{
     display:flex;
     flex-direction:column;
@@ -25,7 +22,6 @@ body{
     margin-bottom:60px;
 }
 
-/* ===== PROFILE ===== */
 .profile{
     width:130px;
     height:130px;
@@ -33,7 +29,6 @@ body{
     margin-bottom:25px;
 }
 
-/* ===== DESCRIPTION ===== */
 .desc{
     max-width:520px;
     font-size:18px;
@@ -42,18 +37,14 @@ body{
     margin-bottom:30px;
 }
 
-/* ===== MAIL BUTTON ===== */
 .mail-btn{
     display:flex;
     align-items:center;
     gap:10px;
-
     padding:12px 18px;
     border-radius:16px;
-
     background:rgba(59,130,246,0.25);
     border:1px solid rgba(59,130,246,0.35);
-
     transition:0.3s;
 }
 
@@ -72,7 +63,6 @@ body{
     filter: brightness(0) invert(1);
 }
 
-/* ===== LINKS GRID (DESKTOP DEFAULT) ===== */
 .links-grid{
     display:grid;
     grid-template-columns: repeat(4, 240px);
@@ -81,51 +71,34 @@ body{
     width:100%;
 }
 
-/* ===== LINK BOX (DESKTOP CARD STYLE) ===== */
 .box{
     width:90%;
     height:78px;
-
     padding:0 20px;
-
     border-radius:40px;
-
     background: rgba(255,255,255,0.05);
     border:1px solid rgba(255,255,255,0.12);
-
     display:flex;
-    align-items:center;        /* 🔥 vertical center FIX */
+    align-items:center;
     justify-content:flex-start;
-
     gap:18px;
-
-    box-sizing:border-box;     /* 🔥 prevents right cut issue */
-
+    box-sizing:border-box;
     transition:0.3s;
 }
 
-
-
-
-/* Hover Effect */
 .box:hover{
     transform:translateY(-3px);
-
     border:1px solid rgba(59,130,246,0.5);
-
     box-shadow:
         0 0 20px rgba(59,130,246,0.2),
         0 10px 30px rgba(0,0,0,0.6);
 }
 
-/* ===== LOGOS ===== */
 .logo{
     width:34px;
     height:34px;
-
     border-radius:50%;
     object-fit:contain;
-
     filter: brightness(0) invert(1);
 }
 
@@ -133,17 +106,17 @@ body{
     font-size:18px;
     font-weight:500;
     letter-spacing:0.3px;
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-/* ===== REMOVE DEFAULT LINK STYLE ===== */
 a{
     text-decoration:none;
     color:inherit;
 }
 
-/* ================= RESPONSIVE ================= */
-
-/* ===== TABLET ===== */
 @media (max-width:1000px){
     .links-grid{
         grid-template-columns: repeat(2, 1fr);
@@ -151,13 +124,13 @@ a{
     }
 }
 
-/* ===== MOBILE LINKTREE MODE ===== */
 @media (max-width:600px){
+
     .box{
         height:74px;
         padding:0 18px;
     }
-    /* Mail → icon only */
+
     .mail-btn{
         padding:12px;
         justify-content:center;
@@ -167,49 +140,38 @@ a{
         display:none;
     }
 
-    /* Grid → Full width vertical list */
     .links-grid{
         width:100%;
-        max-width:620px;   /* slightly bigger = no cut */
-        padding:0 16px;    /* safe mobile spacing */
-
+        max-width:620px;
+        padding:0 16px;
         display:flex;
         flex-direction:column;
         gap:18px;
     }
 
-
-
-
-    /* Box → Horizontal Row */
     .box{
         width:100%;
         height:80px;
-
         flex-direction:row;
         justify-content:flex-start;
         align-items:center;
-
         padding:0 24px;
         gap:20px;
-
         border-radius:22px;
     }
 
-    /* Smaller logos for mobile */
     .logo{
-    width:34px;
-    height:34px;
-    flex-shrink:0;   /* prevents squeeze */
-}
-
+        width:34px;
+        height:34px;
+        flex-shrink:0;
+    }
 
     .name{
-    font-size:18px;
-    font-weight:500;
-
-    display:flex;
-    align-items:center;   /* 🔥 center text vertically */
-}
-
+        font-size:18px;
+        font-weight:500;
+        flex:1;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
 }
