@@ -106,11 +106,11 @@ body{
     font-size:18px;
     font-weight:500;
     letter-spacing:0.3px;
-    flex:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
 }
+
 
 a{
     text-decoration:none;
