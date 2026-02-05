@@ -1,0 +1,180 @@
+/* ===== RESET + BASE ===== */
+body{
+    margin:0;
+    font-family: Inter, sans-serif;
+    background:#020617;
+    color:white;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.main{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+/* ===== TOP SECTION ===== */
+.top-section{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    margin-bottom:60px;
+}
+
+/* ===== PROFILE ===== */
+.profile{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    margin-bottom:25px;
+}
+
+/* ===== DESCRIPTION ===== */
+.desc{
+    max-width:520px;
+    font-size:18px;
+    opacity:0.85;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+.mail-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:12px 18px;
+    border-radius:16px;
+
+    background:rgba(59,130,246,0.25);
+    border:1px solid rgba(59,130,246,0.35);
+
+    transition:0.3s;
+}
+
+
+.mail-btn:hover{
+    transform:translateY(-2px);
+    background:rgba(59,130,246,0.4);
+}
+.mail-text{
+    font-size:15px;
+    font-weight:500;
+}
+.mail-text{
+    display:inline;
+}
+
+
+
+.gmail-logo{
+    width:20px;
+    filter: brightness(0) invert(1);
+}
+
+
+/* ===== LINKS GRID ===== */
+.links-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 200px);
+    gap:30px;
+    justify-content:center;
+}
+
+/* ===== LINK CARDS ===== */
+.box{
+    height:200px;
+    border-radius:24px;
+
+    background: rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.06);
+
+    box-shadow:
+        inset 0 0 20px rgba(255,255,255,0.02),
+        0 10px 30px rgba(0,0,0,0.5);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:16px;
+
+    transition:0.35s;
+
+    text-decoration:none;
+    color:white;
+}
+
+/* Hover Effect */
+.box:hover{
+    transform: translateY(-6px);
+
+    border:1px solid rgba(59,130,246,0.35);
+
+    box-shadow:
+        0 0 25px rgba(59,130,246,0.15),
+        0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* ===== LOGOS ===== */
+.logo{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+    filter: brightness(0) invert(1);
+}
+
+/* ===== REMOVE DEFAULT LINK STYLE ===== */
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width:900px){
+    .links-grid{
+        grid-template-columns: repeat(2, 1fr);
+        max-width:500px;
+    }
+}
+
+@media (max-width:600px){
+
+    .mail-btn{
+        padding:12px;
+        justify-content:center;
+    }
+
+    .mail-text{
+        display:none;
+    }
+
+}
+
+@media (max-width:600px){
+
+    .links-grid{
+        grid-template-columns: 1fr;
+        max-width:320px;
+    }
+
+    .box{
+        flex-direction:row;
+        justify-content:flex-start;
+        padding:20px;
+        height:70px;
+        gap:15px;
+    }
+
+    .logo{
+        width:32px;
+        height:32px;
+    }
+
+}
