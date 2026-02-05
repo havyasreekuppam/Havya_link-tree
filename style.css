@@ -86,7 +86,7 @@ body{
     width:100%;
     height:78px;
 
-    padding:0 22px;
+    padding:0 20px;
 
     border-radius:40px;
 
@@ -94,13 +94,16 @@ body{
     border:1px solid rgba(255,255,255,0.12);
 
     display:flex;
-    align-items:center;
+    align-items:center;        /* 🔥 vertical center FIX */
     justify-content:flex-start;
 
     gap:18px;
 
+    box-sizing:border-box;     /* 🔥 prevents right cut issue */
+
     transition:0.3s;
 }
+
 
 
 
@@ -167,11 +170,14 @@ a{
     /* Grid → Full width vertical list */
     .links-grid{
         width:100%;
-        max-width:600px;
+        max-width:620px;   /* slightly bigger = no cut */
+        padding:0 16px;    /* safe mobile spacing */
+
         display:flex;
         flex-direction:column;
         gap:18px;
     }
+
 
 
 
@@ -192,11 +198,18 @@ a{
 
     /* Smaller logos for mobile */
     .logo{
-        width:32px;
-        height:32px;
-    }
+    width:34px;
+    height:34px;
+    flex-shrink:0;   /* prevents squeeze */
+}
+
 
     .name{
-        font-size:18px;
-    }
+    font-size:18px;
+    font-weight:500;
+
+    display:flex;
+    align-items:center;   /* 🔥 center text vertically */
+}
+
 }
