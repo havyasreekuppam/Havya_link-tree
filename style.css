@@ -85,11 +85,12 @@ body{
     justify-content:center;
 }
 
-/* ===== LINK CARDS ===== */
 .box{
-    height:200px;
-    border-radius:24px;
+    height:160px;
+    width:100%;
+    max-width:260px;   /* control max size */
 
+    border-radius:24px;
     background: rgba(255,255,255,0.04);
     border:1px solid rgba(255,255,255,0.06);
 
@@ -104,10 +105,8 @@ body{
     gap:16px;
 
     transition:0.35s;
-
-    text-decoration:none;
-    color:white;
 }
+
 
 /* Hover Effect */
 .box:hover{
